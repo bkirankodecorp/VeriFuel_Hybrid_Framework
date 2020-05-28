@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VF_Quote_Creation_And_Response" parallel="methods">
+
+	 <test name="Buyer FTL Freight Only Quote Creation for $/Del">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Creation_Buyer_Ranking_Basis_Per_Del" />
+		</classes>
+	</test>
+	<test name="Seller FTL Freight Only Quote Response for $/Del">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Seller_Response_Ranking_Basis_Per_Del" />
+		</classes>
+	</test>
+	<test name="Buyer FTL Freight Only Quote calculation Response for $/Del">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Buyer_Side_Verification_Ranking_Basis_Per_Del" />
+		</classes>
+	</test>
+	<test name="Buyer FTL Freight Only Quote Creation for $/Gal">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Creation_Buyer_Ranking_Basis_Per_Gal" />
+		</classes>
+	</test>
+	<test name="Seller FTL Freight Only Quote Response for $/Gal">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Seller_Response_Ranking_Basis_Per_Gal" />
+		</classes>
+	</test>
+	<test name="Buyer FTL Freight Only Quote calculation Response for $/Gal">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Buyer_Side_Verification_Ranking_Basis_Per_Gal" />
+		</classes>
+	</test>
+	<test name="Buyer FTL Freight Only Quote Creation for $/Period">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Creation_Buyer_Ranking_Basis_Per_Period" />
+		</classes>
+	</test>
+	<test name="Seller FTL Freight Only Quote Response for $/Period">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Seller_Response_Ranking_Basis_Per_Period" />
+		</classes>
+	</test>
+	<test name="Buyer FTL Freight Only Quote calculation Response for $/Period">
+		<classes>
+			<class
+				name="VF_Quote_Creation_And_Response.FTL_Quote_Buyer_Side_Verification_Ranking_Basis_Per_Period" />
+		</classes>
+	</test>
+</suite>
+
+
+
+
+
+<!-- <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+	<suite name="VF_Quote_Creation_And_Response" parallel="tests" group-by-instances="true" 
+	verbose="10"> <test name="Test"> <classes> <class name="VF_Quote_Creation_And_Response.FTL_Quote_Seller_Response"/> 
+	</classes> </test> </suite> -->
+
+<!-- <suite thread-count="2" verbose="10" name="testSuite" parallel="tests"> 
+	<test verbose="2" name="MytestCase" group-by-instances="true"> <classes> 
+	<class name="com.crazytests.dataproviderissue.TestClass1" /> <class name="com.crazytests.dataproviderissue.TestClass2" 
+	/> </classes> </test> </suite> -->

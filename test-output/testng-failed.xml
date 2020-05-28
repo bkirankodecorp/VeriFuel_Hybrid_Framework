@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="VF_Quote_Creation_And_Response.LTL_Quote_Buyer_Side_Verification_Ranking_Basis_Per_Period">
+        <methods>
+          <include name="Verify_Freight_And_Margin_$_Per_Gallon_for_Seller_Freight_Rates_In_TandC"/>
+          <include name="Verify_Page_Navigated_To_Delivery_Location"/>
+          <include name="setUp"/>
+          <include name="teardown"/>
+          <include name="teardowntest"/>
+          <include name="setUptest"/>
+        </methods>
+      </class> <!-- VF_Quote_Creation_And_Response.LTL_Quote_Buyer_Side_Verification_Ranking_Basis_Per_Period -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

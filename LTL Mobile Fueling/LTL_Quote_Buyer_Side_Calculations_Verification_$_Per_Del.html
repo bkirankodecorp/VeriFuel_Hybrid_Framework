@@ -1,0 +1,1759 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>May 25, 2020 08:07:12 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.2</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>32</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='60.748%'><span class='strong'>65</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='39.252%'>42</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>Open D1 Fuel Connect</span>
+						<span class='test-time'>May 25, 2020 08:11:37 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:11:37 PM</span>
+	<span class='label end-time'>May 25, 2020 08:11:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+77ms</span>
+</div>
+	<div class='test-desc'>Validating dev site </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:11:44 PM</td>
+					<td class='step-details'>Navigating to dev site</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:11:44 PM</td>
+					<td class='step-details'>Page is navigated to 
+http://dev.veri-fuel.com/qa</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='45'>
+					<div class='test-heading'>
+						<span class='test-name'>Buyer Login</span>
+						<span class='test-time'>May 25, 2020 08:11:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:11:45 PM</span>
+	<span class='label end-time'>May 25, 2020 08:11:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+904ms</span>
+</div>
+	<div class='test-desc'>Login with Valid Credentials </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:11:45 PM</td>
+					<td class='step-details'>Enter valid Username and Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:11:45 PM</td>
+					<td class='step-details'>Automationltl@kodecorp.com as Username is entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:11:46 PM</td>
+					<td class='step-details'>ultralow as Password is entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:11:46 PM</td>
+					<td class='step-details'>Login Button is clicked</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='46'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_buyer_login</span>
+						<span class='test-time'>May 25, 2020 08:11:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:11:55 PM</span>
+	<span class='label end-time'>May 25, 2020 08:11:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+21ms</span>
+</div>
+	<div class='test-desc'>Verify Buyer is logged in dev site </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:11:55 PM</td>
+					<td class='step-details'>Verify Buyer logged in</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:11:55 PM</td>
+					<td class='step-details'>Automationltl@kodecorp.com Buyer Logged in Succesfully</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='47'>
+					<div class='test-heading'>
+						<span class='test-name'>Navigate_to_Create_Or_View_Page</span>
+						<span class='test-time'>May 25, 2020 08:11:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:11:55 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+891ms</span>
+</div>
+	<div class='test-desc'>Verify Buyer is navigtaed to create page </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:11:55 PM</td>
+					<td class='step-details'>Verify Buyer is navigtaed to create page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:00 PM</td>
+					<td class='step-details'>Page is navigated to Create OR View Quote</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='48'>
+					<div class='test-heading'>
+						<span class='test-name'>Open_Quote_In_Active_Tab</span>
+						<span class='test-time'>May 25, 2020 08:12:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:03 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+991ms</span>
+</div>
+	<div class='test-desc'>Navigate to Active Tab </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:03 PM</td>
+					<td class='step-details'>Navigate to Active Tab</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:06 PM</td>
+					<td class='step-details'>Click Active Quote Tab</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:07 PM</td>
+					<td class='step-details'>Click Active Search Icon</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:08 PM</td>
+					<td class='step-details'>Query on Searchbox with Quote1</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:08 PM</td>
+					<td class='step-details'>Active Quote Number is 12678</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='49'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Page_Navigated_To_Delivery_Location</span>
+						<span class='test-time'>May 25, 2020 08:12:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:16 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+49ms</span>
+</div>
+	<div class='test-desc'>Verify Page is Navigated to Delivery Location </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:16 PM</td>
+					<td class='step-details'>Verify Page is Navigated to Delivery Location</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:16 PM</td>
+					<td class='step-details'>Delivery Location is Ryder Energy Distribution Corp</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:16 PM</td>
+					<td class='step-details'>Page is Navigated to Delivery Location List</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='50'>
+					<div class='test-heading'>
+						<span class='test-name'>Open_View_in_TandC</span>
+						<span class='test-time'>May 25, 2020 08:12:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:16 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+161ms</span>
+</div>
+	<div class='test-desc'>Open View in TandC </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:16 PM</td>
+					<td class='step-details'>Open View in TandC</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:16 PM</td>
+					<td class='step-details'>View TandC in Manage Rounds is Opened</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='51'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_TandC</span>
+						<span class='test-time'>May 25, 2020 08:12:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:16 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+978ms</span>
+</div>
+	<div class='test-desc'>Verify and Validate Delivery Flat Fee value for Seller Freight Rates in TandC </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:16 PM</td>
+					<td class='step-details'>Verify and Validate Delivery Flat Fee value for Seller Freight Rates in TandC</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:18 PM</td>
+					<td class='step-details'>Delivery Flat Fee value is validated in TandC as 200.00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='52'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Freight_And_Margin_$_Per_Gallon_in_Seller_Freight_Rates_In_TandC</span>
+						<span class='test-time'>May 25, 2020 08:12:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:18 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+230ms</span>
+</div>
+	<div class='test-desc'>Verify and Validate Freight and Margin $/Gallon values for Seller Freight Rates in TandC </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:18 PM</td>
+					<td class='step-details'>Verify and Validate Freight and Margin $/Gallon values for Seller Freight Rates in TandC</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:18 PM</td>
+					<td class='step-details'>Freight $/Gal for  Diesel Fuels Category is validated in TandC as 0.1200</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:18 PM</td>
+					<td class='step-details'>Freight $/Gal for  Gasoline Category is validated in TandC as 0.1300</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:18 PM</td>
+					<td class='step-details'>Margin $/Gal for Diesel Fuels Category is validated in TandC as 0.0100</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:18 PM</td>
+					<td class='step-details'>Margin $/Gal for Gasoline Category is validated in TandC as 0.1100</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='53'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Final_Total_And_Ranking_Basis_in_TandC</span>
+						<span class='test-time'>May 25, 2020 08:12:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:18 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+298ms</span>
+</div>
+	<div class='test-desc'>Verify final total and Ranking Basis in TandC </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:18 PM</td>
+					<td class='step-details'>Verify final total and Ranking Basis in TandC</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:22 PM</td>
+					<td class='step-details'>Final Total and Ranking Basis in TandC are same and validated and values are 322.31</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='54'>
+					<div class='test-heading'>
+						<span class='test-name'>Open_Workbench</span>
+						<span class='test-time'>May 25, 2020 08:12:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:22 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+162ms</span>
+</div>
+	<div class='test-desc'>Open Workbench View </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:22 PM</td>
+					<td class='step-details'>Open Workbench View</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:22 PM</td>
+					<td class='step-details'>Click Workbench View in Manage Rounds</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='55'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Buyer_Calculations_on_Workbench</span>
+						<span class='test-time'>May 25, 2020 08:12:26 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:26 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+415ms</span>
+</div>
+	<div class='test-desc'>Verify Buyer Calculations on Workbench </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:26 PM</td>
+					<td class='step-details'>Verify Buyer Calculations on Workbench</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'>Stem Time value is validated in workbench as 1103</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'>Loading Time value is validated in workbench as 0</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'>Avg. Fueling Time Per unit mins value is validated in workbench as 0.0</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'># Fueled Units value is validated in workbench as 50</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'>Total Time per Del. (mins) value is valdated in Workbench as 1103</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'>Avg. Margin & Freight/Del. value is validated in workbench as 322.31</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'>Gross Margin $/Hour value is validated in workbench as 17.53</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'>Distance value is validated in workbench as 1073 miles in 18 hour(s) 23 minute(s)</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='56'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_Workbench</span>
+						<span class='test-time'>May 25, 2020 08:12:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:30 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+564ms</span>
+</div>
+	<div class='test-desc'>Verify and Validate Delivery Flat Fee value for Seller Freight Rates in Workbench </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:30 PM</td>
+					<td class='step-details'>Verify and Validate Delivery Flat Fee value for Seller Freight Rates in Workbench</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Delivery Flat Fee value is validated in workbench as 200.00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='57'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Freight_And_Margin_$_Per_Gallon_in_Seller_Freight_Rates_In_Workbench</span>
+						<span class='test-time'>May 25, 2020 08:12:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:31 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+273ms</span>
+</div>
+	<div class='test-desc'>Verify and Validate Freight and Margin $/Gallon values for Seller Freight Rates in Workbench </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Verify and Validate Freight and Margin $/Gallon values for Seller Freight Rates in Workbench</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Freight $/Gal for  Diesel Fuels Category is validated in workbench as 0.1200</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Freight $/Gal for  Gasoline Category is validated in workbench as 0.1300</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Margin $/Gal for Diesel Fuels Category is validated in Workbench as 0.0100</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Margin $/Gal for Gasoline Category is validated in Workbench as 0.1100</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='58'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_$_Per_Del_Values_in_Workbench</span>
+						<span class='test-time'>May 25, 2020 08:12:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:31 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+144ms</span>
+</div>
+	<div class='test-desc'>Verify and Validated $/Del values in Workbench </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Verify and Validated $/Del values in Workbench</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>$/Del for Diesel Fuels category Value is validated in Workbench as 105.00</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>$/Del for Gasoline category Value is validated in Workbench as 217.31</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Total $/Del Value is validated in Workbench as 322.31</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='59'>
+					<div class='test-heading'>
+						<span class='test-name'>Close_Workbench</span>
+						<span class='test-time'>May 25, 2020 08:12:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:31 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+145ms</span>
+</div>
+	<div class='test-desc'>Close Workbench </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:31 PM</td>
+					<td class='step-details'>Close Workbench</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:33 PM</td>
+					<td class='step-details'>Close Workbench</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='60'>
+					<div class='test-heading'>
+						<span class='test-name'>Award_Quote</span>
+						<span class='test-time'>May 25, 2020 08:12:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:34 PM</span>
+	<span class='label end-time'>May 25, 2020 08:12:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+67ms</span>
+</div>
+	<div class='test-desc'>Award Quote for seller </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:34 PM</td>
+					<td class='step-details'>Award Quote for seller</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:36 PM</td>
+					<td class='step-details'>Click Contigent Status</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:38 PM</td>
+					<td class='step-details'>Click on Yes in pop-up</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:44 PM</td>
+					<td class='step-details'>Click on Yes for Award Yes</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:48 PM</td>
+					<td class='step-details'>Click on Won button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:51 PM</td>
+					<td class='step-details'>Click on Yes in pop-up</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:12:53 PM</td>
+					<td class='step-details'>Click on Award Ok</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='61'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Quote_in_Awarded_Tab</span>
+						<span class='test-time'>May 25, 2020 08:12:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:12:56 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+425ms</span>
+</div>
+	<div class='test-desc'>Verify Awarded quote in Award tab </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:12:56 PM</td>
+					<td class='step-details'>Verify Awarded quote in Award tab</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:00 PM</td>
+					<td class='step-details'>Enter Awarded Quote as Quote1</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:00 PM</td>
+					<td class='step-details'>Quote1 Record is in Awarded Tab</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='62'>
+					<div class='test-heading'>
+						<span class='test-name'>Open_Awarded_Quote</span>
+						<span class='test-time'>May 25, 2020 08:13:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:00 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+104ms</span>
+</div>
+	<div class='test-desc'>open awarded quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:00 PM</td>
+					<td class='step-details'>open awarded quote</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:02 PM</td>
+					<td class='step-details'>Click on Awarded quote</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:06 PM</td>
+					<td class='step-details'>Delivery Location is Ryder Energy Distribution Corp</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='63'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Page_Navigated_To_Delivery_Location_in_Awarded_Quote</span>
+						<span class='test-time'>May 25, 2020 08:13:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:12 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+31ms</span>
+</div>
+	<div class='test-desc'>Verify Page is Navigated to Delivery Location in Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:12 PM</td>
+					<td class='step-details'>Verify Page is Navigated to Delivery Location in Awarded Quote</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:12 PM</td>
+					<td class='step-details'>Page is Navigated to Delivery Location List</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='64'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_awarded_Quote_Status</span>
+						<span class='test-time'>May 25, 2020 08:13:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:12 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+63ms</span>
+</div>
+	<div class='test-desc'>Verify awarded Quote status </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:12 PM</td>
+					<td class='step-details'>Verify awarded Quote status</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:12 PM</td>
+					<td class='step-details'>Quote1 Quote status is Won</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='65'>
+					<div class='test-heading'>
+						<span class='test-name'>Open_View_in_TandC_in_Awarded_Quote</span>
+						<span class='test-time'>May 25, 2020 08:13:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:12 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+163ms</span>
+</div>
+	<div class='test-desc'>Open View in TandC in Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:12 PM</td>
+					<td class='step-details'>Open View in TandC in Awarded Quote</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:12 PM</td>
+					<td class='step-details'>View TandC in Manage Rounds is Opened</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='66'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_TandC_for_Awarded_Quote</span>
+						<span class='test-time'>May 25, 2020 08:13:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:12 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+888ms</span>
+</div>
+	<div class='test-desc'>Verify and Validate Delivery Flat Fee value for Seller Freight Rates in TandC for awarded quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:12 PM</td>
+					<td class='step-details'>Verify and Validate Delivery Flat Fee value for Seller Freight Rates in TandC for awarded quote</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:14 PM</td>
+					<td class='step-details'>Delivery Flat Fee value is validated in TandC as 200.00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='67'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Freight_And_Margin_$_Per_Gallon_for_Seller_Freight_Rates_In_TandC_for_Awarded_Quote</span>
+						<span class='test-time'>May 25, 2020 08:13:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:14 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+247ms</span>
+</div>
+	<div class='test-desc'>Verify and Validate Freight and Margin $/Gallon values for Seller Freight Rates in TandC for Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:14 PM</td>
+					<td class='step-details'>Verify and Validate Freight and Margin $/Gallon values for Seller Freight Rates in TandC for Awarded Quote</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:14 PM</td>
+					<td class='step-details'>Freight $/Gal for  Diesel Fuels Category is validated in TandC as 0.1200</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:15 PM</td>
+					<td class='step-details'>Freight $/Gal for  Gasoline Category is validated in TandC as 0.1300</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:15 PM</td>
+					<td class='step-details'>Margin $/Gal for Diesel Fuels Category is validated in TandC as 0.0100</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:15 PM</td>
+					<td class='step-details'>Margin $/Gal for Gasoline Category is validated in TandC as 0.1100</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='68'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Final_Total_And_Ranking_Basis_in_TandC_for_Awarded_Quote</span>
+						<span class='test-time'>May 25, 2020 08:13:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:15 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+247ms</span>
+</div>
+	<div class='test-desc'>Verify final total and Ranking Basis in TandC for Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:15 PM</td>
+					<td class='step-details'>Verify final total and Ranking Basis in TandC for Awarded Quote</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:18 PM</td>
+					<td class='step-details'>Final Total and Ranking Basis in TandC are same and validated and values are 322.31</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='69'>
+					<div class='test-heading'>
+						<span class='test-name'>Open_Workbench_for_Awarded_quote</span>
+						<span class='test-time'>May 25, 2020 08:13:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:18 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+209ms</span>
+</div>
+	<div class='test-desc'>Open Workbench View for Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:18 PM</td>
+					<td class='step-details'>Open Workbench View for Awarded Quote</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:18 PM</td>
+					<td class='step-details'>Click Workbench View in Manage Rounds</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='70'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Buyer_Calculations_on_Workbench_for_Awarded_quote</span>
+						<span class='test-time'>May 25, 2020 08:13:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:20 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+377ms</span>
+</div>
+	<div class='test-desc'>Verify Buyer Calculations on Workbench for Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:20 PM</td>
+					<td class='step-details'>Verify Buyer Calculations on Workbench for Awarded Quote</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:24 PM</td>
+					<td class='step-details'>Stem Time value is validated in workbench as 1103</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:24 PM</td>
+					<td class='step-details'>Loading Time value is validated in workbench as 0</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:24 PM</td>
+					<td class='step-details'>Avg. Fueling Time Per unit mins value is validated in workbench as 0.0</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:24 PM</td>
+					<td class='step-details'># Fueled Units value is validated in workbench as 50</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:24 PM</td>
+					<td class='step-details'>Total Time per Del. (mins) value is valdated in Workbench as 1103</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:24 PM</td>
+					<td class='step-details'>Avg. Margin & Freight/Del. value is validated in workbench as 322.31</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:24 PM</td>
+					<td class='step-details'>Gross Margin $/Hour value is validated in workbench as 17.53</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:25 PM</td>
+					<td class='step-details'>Distance value is validated in workbench as 1073 miles in 18 hour(s) 23 minute(s)</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='71'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_Workbench_for_Awarded_quote</span>
+						<span class='test-time'>May 25, 2020 08:13:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:25 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+798ms</span>
+</div>
+	<div class='test-desc'>Verify and Validate Delivery Flat Fee value for Seller Freight Rates in Workbench for Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:25 PM</td>
+					<td class='step-details'>Verify and Validate Delivery Flat Fee value for Seller Freight Rates in Workbench for Awarded Quote</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:25 PM</td>
+					<td class='step-details'>Delivery Flat Fee value is validated in workbench as 200.00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='72'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_Freight_And_Margin_$_Per_Gallon_in_Seller_Freight_Rates_In_Workbench</span>
+						<span class='test-time'>May 25, 2020 08:13:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:25 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+348ms</span>
+</div>
+	<div class='test-desc'>Verify and Validate Freight and Margin $/Gallon values for Seller Freight Rates in Workbench </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:25 PM</td>
+					<td class='step-details'>Verify and Validate Freight and Margin $/Gallon values for Seller Freight Rates in Workbench</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:25 PM</td>
+					<td class='step-details'>Freight $/Gal for  Diesel Fuels Category is validated in workbench as 0.1200</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:25 PM</td>
+					<td class='step-details'>Freight $/Gal for  Gasoline Category is validated in workbench as 0.1300</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:25 PM</td>
+					<td class='step-details'>Margin $/Gal for Diesel Fuels Category is validated in Workbench as 0.0100</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:26 PM</td>
+					<td class='step-details'>Margin $/Gal for Gasoline Category is validated in Workbench as 0.1100</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='73'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify_$_Per_Del_Values_in_Workbench_for_Awarded_quote</span>
+						<span class='test-time'>May 25, 2020 08:13:26 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:26 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+135ms</span>
+</div>
+	<div class='test-desc'>Verify and Validated $/Del values in Workbench for Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:26 PM</td>
+					<td class='step-details'>Verify and Validated $/Del values in Workbench for Awarded Quote</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:26 PM</td>
+					<td class='step-details'>$/Del for Diesel Fuels category Value is validated in Workbench as 105.00</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:26 PM</td>
+					<td class='step-details'>$/Del for Gasoline category Value is validated in Workbench as 217.31</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:26 PM</td>
+					<td class='step-details'>Total $/Del Value is validated in Workbench as 322.31</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='74'>
+					<div class='test-heading'>
+						<span class='test-name'>Close_Workbench_for_Awarded_quote</span>
+						<span class='test-time'>May 25, 2020 08:13:26 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:26 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+200ms</span>
+</div>
+	<div class='test-desc'>Close Workbench for Awarded Quote </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:26 PM</td>
+					<td class='step-details'>Close Workbench for Awarded Quote</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:28 PM</td>
+					<td class='step-details'>Close Workbench</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='75'>
+					<div class='test-heading'>
+						<span class='test-name'>Veify_Buyer_Logout</span>
+						<span class='test-time'>May 25, 2020 08:13:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 25, 2020 08:13:28 PM</span>
+	<span class='label end-time'>May 25, 2020 08:13:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+774ms</span>
+</div>
+	<div class='test-desc'>verifying Buyer is logged out succesfully </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>8:13:28 PM</td>
+					<td class='step-details'>verifying quote in Active tab</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:13:32 PM</td>
+					<td class='step-details'>Automationltl@kodecorp.com Buyer Logged Out Successfully</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>32</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>107</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 25, 2020 08:07:12 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 25, 2020 08:25:41 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>1,109,473ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 32,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 65,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 42,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

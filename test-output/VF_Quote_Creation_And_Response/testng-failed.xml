@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [VF_Quote_Creation_And_Response]" parallel="methods">
+  <test thread-count="5" name="Buyer LTL Mobile Fueling Quote calculation Response for $/Gal(failed)" parallel="methods">
+    <classes>
+      <class name="VF_Quote_Creation_And_Response.LTL_Quote_Buyer_Side_Verification_Ranking_Basis_Per_Gal">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUptest"/>
+          <include name="teardowntest"/>
+          <include name="teardown"/>
+          <include name="Verify_Page_Navigated_To_Delivery_Location"/>
+        </methods>
+      </class> <!-- VF_Quote_Creation_And_Response.LTL_Quote_Buyer_Side_Verification_Ranking_Basis_Per_Gal -->
+    </classes>
+  </test> <!-- Buyer LTL Mobile Fueling Quote calculation Response for $/Gal(failed) -->
+  <test thread-count="5" name="Buyer LTL Mobile Fueling Seller Respone for $/Periodl(failed)" parallel="methods">
+    <classes>
+      <class name="VF_Quote_Creation_And_Response.LTL_Quote_Seller_Response_Ranking_Basis_Per_Period">
+        <methods>
+          <include name="Get_Values_from_Buyer_Calculator"/>
+          <include name="teardowntest"/>
+          <include name="setUptest"/>
+          <include name="teardown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- VF_Quote_Creation_And_Response.LTL_Quote_Seller_Response_Ranking_Basis_Per_Period -->
+    </classes>
+  </test> <!-- Buyer LTL Mobile Fueling Seller Respone for $/Periodl(failed) -->
+</suite> <!-- Failed suite [VF_Quote_Creation_And_Response] -->

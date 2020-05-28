@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="29" passed="29">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="169181" started-at="2020-05-27T12:11:28Z" finished-at="2020-05-27T12:14:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="169181" started-at="2020-05-27T12:11:28Z" finished-at="2020-05-27T12:14:17Z">
+      <class name="VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="setUp" is-config="true" duration-ms="185" started-at="2020-05-27T12:11:28Z" finished-at="2020-05-27T12:11:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUptest()[pri:0, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="setUptest" is-config="true" duration-ms="3953" started-at="2020-05-27T12:11:28Z" finished-at="2020-05-27T12:11:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUptest -->
+        <test-method status="PASS" signature="Open_Browser()[pri:0, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Open_Browser" duration-ms="9331" started-at="2020-05-27T12:11:32Z" finished-at="2020-05-27T12:11:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Open_Browser -->
+        <test-method status="PASS" signature="Seller_Login()[pri:1, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Seller_Login" duration-ms="20236" started-at="2020-05-27T12:11:41Z" finished-at="2020-05-27T12:12:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Seller_Login -->
+        <test-method status="PASS" signature="verify_Seller_login()[pri:2, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="verify_Seller_login" duration-ms="2807" started-at="2020-05-27T12:12:01Z" finished-at="2020-05-27T12:12:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Seller_login -->
+        <test-method status="PASS" signature="Navigate_to_Review_Quote()[pri:3, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Navigate_to_Review_Quote" duration-ms="38145" started-at="2020-05-27T12:12:04Z" finished-at="2020-05-27T12:12:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigate_to_Review_Quote -->
+        <test-method status="PASS" signature="Seller_New_Quote_Search()[pri:4, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Seller_New_Quote_Search" duration-ms="14589" started-at="2020-05-27T12:12:42Z" finished-at="2020-05-27T12:12:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Seller_New_Quote_Search -->
+        <test-method status="PASS" signature="Verify_Quote_status_as_NEW()[pri:5, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_Quote_status_as_NEW" duration-ms="99" started-at="2020-05-27T12:12:57Z" finished-at="2020-05-27T12:12:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Quote_status_as_NEW -->
+        <test-method status="PASS" signature="Enter_Delivery_Flat_Fee_And_freight_$_per_gal_in_Quick_response_grid()[pri:6, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Enter_Delivery_Flat_Fee_And_freight_$_per_gal_in_Quick_response_grid" duration-ms="1174" started-at="2020-05-27T12:12:57Z" finished-at="2020-05-27T12:12:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Enter_Delivery_Flat_Fee_And_freight_$_per_gal_in_Quick_response_grid -->
+        <test-method status="PASS" signature="Verify_Quote_status_as_HoldAsDraft()[pri:7, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_Quote_status_as_HoldAsDraft" duration-ms="130" started-at="2020-05-27T12:12:58Z" finished-at="2020-05-27T12:12:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Quote_status_as_HoldAsDraft -->
+        <test-method status="PASS" signature="Enter_valid_Margin_$_Per_Gal()[pri:8, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Enter_valid_Margin_$_Per_Gal" duration-ms="948" started-at="2020-05-27T12:12:58Z" finished-at="2020-05-27T12:12:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Enter_valid_Margin_$_Per_Gal -->
+        <test-method status="PASS" signature="Select_OPIS_State_And_City()[pri:9, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Select_OPIS_State_And_City" duration-ms="10225" started-at="2020-05-27T12:12:59Z" finished-at="2020-05-27T12:13:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Select_OPIS_State_And_City -->
+        <test-method status="PASS" signature="Set_Product_Category_Values()[pri:10, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Set_Product_Category_Values" duration-ms="1338" started-at="2020-05-27T12:13:09Z" finished-at="2020-05-27T12:13:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Set_Product_Category_Values -->
+        <test-method status="PASS" signature="Save_Response_in_Quick_Response()[pri:11, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Save_Response_in_Quick_Response" duration-ms="4297" started-at="2020-05-27T12:13:11Z" finished-at="2020-05-27T12:13:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Save_Response_in_Quick_Response -->
+        <test-method status="PASS" signature="Verify_Quote_status_as_ReadytoSubmit()[pri:12, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_Quote_status_as_ReadytoSubmit" duration-ms="89" started-at="2020-05-27T12:13:15Z" finished-at="2020-05-27T12:13:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Quote_status_as_ReadytoSubmit -->
+        <test-method status="PASS" signature="Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_TandC()[pri:13, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_TandC" duration-ms="8515" started-at="2020-05-27T12:13:15Z" finished-at="2020-05-27T12:13:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_TandC -->
+        <test-method status="PASS" signature="Verify_Freight_And_Margin_$_Per_Gallon_for_Seller_Freight_Rates_In_TandC()[pri:14, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_Freight_And_Margin_$_Per_Gallon_for_Seller_Freight_Rates_In_TandC" duration-ms="238" started-at="2020-05-27T12:13:24Z" finished-at="2020-05-27T12:13:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Freight_And_Margin_$_Per_Gallon_for_Seller_Freight_Rates_In_TandC -->
+        <test-method status="PASS" signature="Retrieve_$_Per_Del_Values_From_TandC()[pri:15, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Retrieve_$_Per_Del_Values_From_TandC" duration-ms="762" started-at="2020-05-27T12:13:24Z" finished-at="2020-05-27T12:13:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Retrieve_$_Per_Del_Values_From_TandC -->
+        <test-method status="PASS" signature="Retrieve_$_Per_Gal_Values_From_TandC()[pri:16, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Retrieve_$_Per_Gal_Values_From_TandC" duration-ms="789" started-at="2020-05-27T12:13:25Z" finished-at="2020-05-27T12:13:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Retrieve_$_Per_Gal_Values_From_TandC -->
+        <test-method status="PASS" signature="Retrieve_$_Per_Period_Values_From_TandC()[pri:17, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Retrieve_$_Per_Period_Values_From_TandC" duration-ms="466" started-at="2020-05-27T12:13:25Z" finished-at="2020-05-27T12:13:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Retrieve_$_Per_Period_Values_From_TandC -->
+        <test-method status="PASS" signature="Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_Workbench()[pri:18, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_Workbench" duration-ms="3110" started-at="2020-05-27T12:13:26Z" finished-at="2020-05-27T12:13:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Delivery_Flat_Fee_for_Seller_Freight_Rates_In_Workbench -->
+        <test-method status="PASS" signature="Verify_Freight_And_Margin_$_Per_Gallon_for_Seller_Freight_Rates_In_Workbench()[pri:19, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_Freight_And_Margin_$_Per_Gallon_for_Seller_Freight_Rates_In_Workbench" duration-ms="237" started-at="2020-05-27T12:13:29Z" finished-at="2020-05-27T12:13:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Freight_And_Margin_$_Per_Gallon_for_Seller_Freight_Rates_In_Workbench -->
+        <test-method status="PASS" signature="Verify_$_Per_Del_Values_in_Workbench()[pri:20, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_$_Per_Del_Values_in_Workbench" duration-ms="256" started-at="2020-05-27T12:13:29Z" finished-at="2020-05-27T12:13:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_$_Per_Del_Values_in_Workbench -->
+        <test-method status="PASS" signature="Verify_$_Per_Gal_Values_in_Workbench()[pri:21, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_$_Per_Gal_Values_in_Workbench" duration-ms="280" started-at="2020-05-27T12:13:30Z" finished-at="2020-05-27T12:13:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_$_Per_Gal_Values_in_Workbench -->
+        <test-method status="PASS" signature="Verify_$_Per_Period_Values_in_Workbench()[pri:22, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_$_Per_Period_Values_in_Workbench" duration-ms="233" started-at="2020-05-27T12:13:30Z" finished-at="2020-05-27T12:13:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_$_Per_Period_Values_in_Workbench -->
+        <test-method status="PASS" signature="check_Publish_To_Buyer_Calculator()[pri:23, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="check_Publish_To_Buyer_Calculator" duration-ms="138" started-at="2020-05-27T12:13:30Z" finished-at="2020-05-27T12:13:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Publish_To_Buyer_Calculator -->
+        <test-method status="PASS" signature="Get_Values_from_Buyer_Calculator()[pri:24, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Get_Values_from_Buyer_Calculator" duration-ms="1584" started-at="2020-05-27T12:13:30Z" finished-at="2020-05-27T12:13:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Get_Values_from_Buyer_Calculator -->
+        <test-method status="PASS" signature="Verify_finaltotal_and_RankingBasis_Values()[pri:25, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Verify_finaltotal_and_RankingBasis_Values" duration-ms="11720" started-at="2020-05-27T12:13:32Z" finished-at="2020-05-27T12:13:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_finaltotal_and_RankingBasis_Values -->
+        <test-method status="PASS" signature="Submit_response()[pri:26, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Submit_response" duration-ms="6679" started-at="2020-05-27T12:13:43Z" finished-at="2020-05-27T12:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Submit_response -->
+        <test-method status="PASS" signature="verify_Submitted_quote_in_Active()[pri:27, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="verify_Submitted_quote_in_Active" duration-ms="24910" started-at="2020-05-27T12:13:50Z" finished-at="2020-05-27T12:14:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Submitted_quote_in_Active -->
+        <test-method status="PASS" signature="Logout_seller()[pri:28, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="Logout_seller" duration-ms="1845" started-at="2020-05-27T12:14:15Z" finished-at="2020-05-27T12:14:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout_seller -->
+        <test-method status="PASS" signature="teardowntest()[pri:0, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="teardowntest" is-config="true" duration-ms="0" started-at="2020-05-27T12:14:17Z" finished-at="2020-05-27T12:14:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardowntest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del@8e24743]" name="teardown" is-config="true" duration-ms="406" started-at="2020-05-27T12:14:17Z" finished-at="2020-05-27T12:14:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- VF_Quote_Creation_And_Response.LTL_TW_Quote_Seller_Response_Ranking_Basis_Per_Del -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
